@@ -33,7 +33,7 @@ void AProceduralSplineMesh::Tick(float DeltaTime)
 
 }
 
-#pragma optimize("", off )
+#pragma optimize("", off)
 void AProceduralSplineMesh::OnConstruction(const FTransform & Transform)
 {
 	size_t SplineEdgesCount = Spline->GetNumberOfSplinePoints() - 1;
@@ -63,4 +63,4 @@ void AProceduralSplineMesh::OnConstruction(const FTransform & Transform)
 	}
 	RegisterAllComponents();
 }
-#pragma optimize("", on )
+#pragma optimize("", on)
