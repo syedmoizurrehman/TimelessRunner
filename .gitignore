@@ -12,3 +12,8 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+/Content/Assets/Drone/Drone_N.png
+/Content/Assets/Drone/1.fbx
+/Content/ProceduralTools/Meshes/Pipe.fbx
+/Content/ProceduralTools/Meshes/Road.fbx
+/Content/ProceduralTools/Textures/Diffuse.png
