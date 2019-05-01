@@ -6,6 +6,11 @@
 #include "GameFramework/Actor.h"
 #include "ProceduralSplineMesh.generated.h"
 
+namespace ESplineMeshAxis
+{
+	enum Type;
+}
+
 UCLASS()
 class TIMELESSRUNNER_API AProceduralSplineMesh : public AActor
 {
@@ -18,6 +23,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	class UStaticMesh* SplineMesh;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	TEnumAsByte<ESplineMeshAxis::Type> SplineMeshAxis;
+
 	// Sets default values for this actor's properties
 	AProceduralSplineMesh();
 

@@ -17,6 +17,7 @@ AProceduralSplineMesh::AProceduralSplineMesh()
 	
 	Spline = CreateDefaultSubobject<USplineComponent>(TEXT("Spline"));
 	Spline->SetupAttachment(RootComponent);
+	SplineMeshAxis = ESplineMeshAxis::Z;
 }
 
 // Called when the game starts or when spawned
@@ -52,7 +53,7 @@ void AProceduralSplineMesh::OnConstruction(const FTransform & Transform)
 		SplineMeshComp->SetupAttachment(Spline);
 		SplineMeshComp->CreationMethod = EComponentCreationMethod::UserConstructionScript;
 		SplineMeshComp->SetStaticMesh(SplineMesh);
-		SplineMeshComp->ForwardAxis = ESplineMeshAxis::Z;
+		SplineMeshComp->ForwardAxis = SplineMeshAxis;
 		FVector StartLocationAtPoint;
 		FVector StartTangentAtPoint;
 		FVector EndLocationAtPoint;
